@@ -1,4 +1,6 @@
 ## CFRefreshToken
+ColdFusion component returns an AccessToken from a Refresh Token.
+
 
 ### Example Usage
 ```
