@@ -6,10 +6,8 @@ component {
         this.endPoint = endPoint;
         return (this);
     }
-
-    public
-    function getToken() {
-        httpService = new http();
+    public function getToken() {
+       var httpService = new http();
         httpService.setMethod("post");
         httpService.setCharset("utf-8");
         httpService.setUrl(this.endPoint);
@@ -17,7 +15,7 @@ component {
         httpService.addParam(type = "formfield", name = "client_secret", value = this.clientSecret);
         httpService.addParam(type = "formfield", name = "refresh_token", value = this.refreshToken);
         httpService.addParam(type = "formfield", name = "grant_type", value = "refresh_token");
-        result = httpService.send().getPrefix();
-        return deserializeJson(variables.result.filecontent);
+        var result = httpService.send().getPrefix();
+        return deserializeJson(result.filecontent);
     }
 }
