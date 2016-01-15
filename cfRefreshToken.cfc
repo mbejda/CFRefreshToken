@@ -7,7 +7,7 @@ component {
         return (this);
     }
     public function getToken() {
-       var httpService = new http();
+        var httpService = new http();
         httpService.setMethod("post");
         httpService.setCharset("utf-8");
         httpService.setUrl(this.endPoint);
